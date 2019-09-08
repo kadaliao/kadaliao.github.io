@@ -13,5 +13,15 @@ layout: default
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
+    <meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
+    <p class="post-meta">
+    {% if page.tags != empty %}
+    Tags:
+    {% for tag in page.tags %}
+    <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>{% unless page.tags.last == tag %}; {% endunless %}
+    {% endfor %}
+    {% endif %}
+    </p>
+
   {% include disqus.html %}
 </article>
