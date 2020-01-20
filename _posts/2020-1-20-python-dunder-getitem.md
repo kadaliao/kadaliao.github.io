@@ -6,7 +6,7 @@ tags: python
 
 如果一个类实现了`__len__`方法和`__getitem__`，可以视作一个immutable sequence。
 
-有了`__getitem__`方法的类的实例`x`，我们可以做下标访问`x[i]`，`a in x`， `for item in in x`等操作。
+有了`__getitem__`方法的类的实例`x`，我们可以做下标访问`x[i]`，`a in x`， `for item in x`等操作。
 
 * 虽然没有实现`__contains__`，Python会用迭代遍历`__getitem__`，找到元素就返回`True`
 * 虽然没有实现`__iter__`方法，但是Python会使用`__getitem__`配合`IndexError`来做迭代行为。
