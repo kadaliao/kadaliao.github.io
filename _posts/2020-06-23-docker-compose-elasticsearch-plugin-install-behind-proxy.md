@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 在docker中通过用代理为elasticsearch安装插件
+title: 在docker中通过代理为elasticsearch安装插件
 tags: docker elasticsearch
 ---
 
