@@ -4,7 +4,7 @@ title: 在docker中通过代理为elasticsearch安装插件
 tags: docker elasticsearch
 ---
 
-要为运行中的elasticsearch container安装插件，`docker-compose exec -it <ealsticsearch_service_name> bin/elasticsearch-plugin install <plugin>`即可。
+要为运行中的elasticsearch container安装插件，`docker-compose exec <ealsticsearch_service_name> bin/elasticsearch-plugin install <plugin>`即可。
 
 但是现在得各种服务器，访问github以及其他海外网站都卡出翔，不走代理是不行的。
 
