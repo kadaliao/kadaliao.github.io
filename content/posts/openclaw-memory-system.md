@@ -7,7 +7,7 @@ categories: ["AI Agent"]
 description: "OpenClaw 的记忆系统并不神秘，它非常工程化。理解三层记忆机制、向量检索原理和常见坑，才能把 Agent 调到长期稳定的状态。"
 ---
 
-![](https://files.mdnice.com/user/180844/d55edf89-635e-4d99-807c-8afd9c85584c.jpg)
+![](/images/posts/openclaw-1.jpg)
 
 很多人辛辛苦苦养的小龙虾，都会在某个时刻让主人产生一种挫败感：
 
@@ -49,7 +49,7 @@ OpenClaw 的记忆系统并不神秘。恰恰相反，它非常工程化：**记
 
 如果你把 OpenClaw 当作一个有天然长期记忆的大脑，就很容易失望；如果你把它当作一个**带文件系统、检索和压缩机制的 Agent 运行时**，它的行为反而会变得非常可预测。
 
-![](https://files.mdnice.com/user/180844/4343a48b-96d9-4df8-8a46-336b22c5d971.jpg)
+![](/images/posts/openclaw-2.jpg)
 
 ---
 
@@ -242,7 +242,7 @@ assistant: 已确认是时间边界处理错误，准备修复
 
 反过来说，`memory/` 里那类对话摘录风格的文件并不是"错"，它们本来就更像**采集层**。真正需要管理的，是噪声密度：把高价值信息提炼进 `MEMORY.md`，把仍需短期延续的内容补进当天的 `memory/YYYY-MM-DD.md`，再删掉已经过时的噪声。
 
-![](https://files.mdnice.com/user/180844/1a53f73d-4044-4ecf-bcf2-f2fac1c6c34e.jpg)
+![](/images/posts/openclaw-3.jpg)
 
 ---
 
@@ -357,7 +357,7 @@ OpenClaw 当前文档明确说明：
 
 ## 七、最容易踩的六个坑
 
-![](https://files.mdnice.com/user/180844/bf7c7275-7351-4888-8c53-47b4ee7f860c.jpg)
+![](/images/posts/openclaw-4.jpg)
 
 ### 坑 1：改了工作区文件，却在旧会话里等它生效
 

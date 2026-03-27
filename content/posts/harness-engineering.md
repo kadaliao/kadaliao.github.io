@@ -27,7 +27,7 @@ Harness，字面意思是"缰绳"或"挽具"。
 
 听起来很虚？下面看具体的。
 
-![](https://files.mdnice.com/user/180844/5b57f5f3-8848-4b45-b842-ecede0bbb20b.jpg)
+![](/images/posts/harness-1.jpg)
 
 ---
 
@@ -99,7 +99,7 @@ Anthropic 工程博客最近发了一篇文章，专门讲他们怎么用 harnes
 - **Generator**：按计划逐步实现，只管"做"。
 - **Evaluator**：用 Playwright 真实跑页面、点按钮、发请求，找 bug。设定验收阈值，不达标就打回，并给出可复现、可行动的具体反馈——不是"有问题"，而是"第 3 步点击后 API 返回 500，复现命令是 X"。
 
-![](https://files.mdnice.com/user/180844/e636a9f9-130d-48c1-9ed5-10527541a263.jpg)
+![](/images/posts/harness-2.jpg)
 
 他们有一个亲测的对比数据：
 
@@ -198,7 +198,7 @@ Constitution + Spec（意图落盘，约束写死）
 
 这样，SDD 解决的是"agent 知道要做什么"，Ralph Loop + Verify Tasks + analyze 解决的是"agent 能自主确认有没有真的做到"——两者加在一起，才是一个完整的 harness 闭环。
 
-![](https://files.mdnice.com/user/180844/b33e2b81-d067-4bd0-965c-beae39924d79.jpg)
+![](/images/posts/harness-3.jpg)
 
 ---
 
