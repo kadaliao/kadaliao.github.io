@@ -1,6 +1,6 @@
 ---
 title: "小龙虾为何变蠢、失忆？深入理解 OpenClaw 记忆系统"
-date: "2026-03-24"
+date: "2026-03-18"
 draft: false
 tags: ["Agent", "OpenClaw", "记忆系统", "工程实践"]
 categories: ["AI Agent"]

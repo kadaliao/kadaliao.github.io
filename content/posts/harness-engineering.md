@@ -1,6 +1,6 @@
 ---
 title: "Harness Engineering 是什么，如何落地"
-date: "2026-03-27T11:00:00+08:00"
+date: "2026-03-27"
 draft: false
 tags: ["Agent", "Harness Engineering", "SDD", "工程实践", "SpecKit"]
 categories: ["AI Agent"]
