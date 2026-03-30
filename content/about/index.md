@@ -7,7 +7,7 @@ summary: about
 
 ## 你好，我是 Kada
 
-Python 工程师，在 AI 应用工程领域摸爬滚打了几年。
+Python 工程师。
 
 主要方向：
 

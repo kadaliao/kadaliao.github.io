@@ -9,7 +9,7 @@ buildFuture = false
 
 [params]
   author = "Kada Liao"
-  description = "Python 工程师，专注 AI Agent 与应用工程"
+  description = "Python 工程师，专注 AI 应用工程"
   defaultTheme = "auto"
   showReadingTime = true
   showShareButtons = false
@@ -22,7 +22,7 @@ buildFuture = false
 
   [params.homeInfoParams]
     Title = "Kada's Notes"
-    Content = "Python 工程师，写 AI Agent、RAG、LLM 应用工程实践，偶尔聊聊 Python 那些事。公众号：**Agent 工程手记**"
+    Content = "Python 工程师，写 AI Agent、RAG、LLM 应用工程实践，偶尔聊聊 Python 那些事。"
 
   [[params.socialIcons]]
     name = "github"
