@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kada Liao — 给 AI 编程助手做工具</title>
+<meta name="description" content="Kada Liao，Python 工程师，在北京。sessift：跨机器搜索、恢复 AI 编程助手的会话；claude-mods：改 Claude Code 自己界面的插件；ccenv、esp32-26、mytizi、herdr-plugins、dsh-plugins。">
+<meta name="author" content="Kada Liao">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#06070b">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://kadaliao.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Kada Liao">
+<meta property="og:title" content="Kada Liao — 给 AI 编程助手做工具">
+<meta property="og:description" content="sessift、claude-mods、ccenv、esp32-26：从具体的不方便开始做的 7 个工具。">
+<meta property="og:url" content="https://kadaliao.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Kada Liao","alternateName":"kadaliao","url":"https://kadaliao.github.io/","jobTitle":"Software Engineer","sameAs":["https://github.com/kadaliao"],"knowsAbout":["AI agents","Rust","TypeScript","Swift","Python","ESP-IDF"]}
+</script>
+</head>
+<body id="top">
+
+<div class="aurora" aria-hidden="true">
+  <span class="blob b1"></span>
+  <span class="blob b2"></span>
+  <span class="blob b3"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+
+<a class="skip" href="#work">跳到项目</a>
+
+<header class="nav">
+  <a class="brand" href="#top" aria-label="回到顶部">
+    <span class="brand-mark" aria-hidden="true">k</span>
+    <span class="brand-text">kada</span>
+  </a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="#work">项目</a>
+    <a href="#now">现在</a>
+    <a href="#about">关于</a>
+  </nav>
+  <div class="nav-right">
+    <button class="kbd-btn" id="palette-open" aria-label="打开命令面板">
+      <kbd>⌘</kbd><kbd>K</kbd>
+    </button>
+    <a class="nav-gh" href="https://github.com/kadaliao" target="_blank" rel="noopener">
+      GitHub<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg>
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ───────────────────────── hero ───────────────────────── -->
+  <section class="hero">
+    <div class="hero-copy reveal" style="--i:0">
+      <p class="kicker"><span class="pulse" aria-hidden="true"></span>AI agent tooling · 独立项目</p>
+      <h1>Kada <span class="grad">Liao</span></h1>
+      <p class="lede">我给 AI 编程助手做工具。</p>
+      <p class="body">主要写 Python。这些项目大多从一个具体的不方便开始：会话散在三台机器上翻不到，就写了 sessift；想知道模型每秒吐多少 token，就去改 Claude&nbsp;Code 的 statusline。</p>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="#work">
+          看项目
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
+        <button class="btn btn-ghost copy-btn" data-copy="brew install kadaliao/tap/sessift" data-copy-label="brew install kadaliao/tap/sessift">
+          <code>$ brew install kadaliao/tap/sessift</code>
+          <span class="copy-state" data-idle="复制" data-done="已复制 ✓">复制</span>
+        </button>
+      </div>
+
+      <dl class="hero-facts">
+        <div>
+          <dt>在做的</dt>
+          <dd>7 个自己的项目</dd>
+        </div>
+        <div>
+          <dt>主要写</dt>
+          <dd>Python · Rust · TS · Swift</dd>
+        </div>
+        <div>
+          <dt>最近更新</dt>
+          <dd id="last-push" data-repo="esp32-26">esp32-26</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="hero-visual reveal" style="--i:1">
+      <div class="term" role="img" aria-label="sessift 交互界面示意：列出三台机器上的 AI 编程助手会话">
+        <div class="term-bar">
+          <span class="tl"></span><span class="tl"></span><span class="tl"></span>
+          <span class="term-title">sessift — 本机 + mbp + mm</span>
+        </div>
+        <div class="term-body">
+          <p class="term-line"><span class="p">~</span><span class="prompt">$</span><span class="cmd">sessift</span><span class="caret" aria-hidden="true"></span></p>
+          <p class="term-line dim">索引本机 + mbp + mm … 30ms</p>
+          <div class="term-search">
+            <span class="term-q">超时</span><span class="term-cursor" aria-hidden="true"></span>
+          </div>
+          <ul class="term-rows">
+            <li class="sel"><span class="t-title">claude 超时重试</span><span class="t-ago">2 小时前</span><span class="t-src">mbp · claude-code</span></li>
+            <li><span class="t-title">codex 重构提议</span><span class="t-ago">昨天</span><span class="t-src">mm · codex</span></li>
+            <li><span class="t-title">sessift 索引慢</span><span class="t-ago">3 天前</span><span class="t-src">local · pi</span></li>
+          </ul>
+          <p class="term-hint"><kbd>enter</kbd>恢复 <kbd>tab</kbd>预览 <kbd>o</kbd>全文 <kbd>alt</kbd>+<kbd>m</kbd>唤出</p>
+        </div>
+      </div>
+      <p class="visual-note">会话留在各自的机器上，查询时才现场连过去</p>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── work ───────────────────────── -->
+  <section id="work" class="section">
+    <div class="section-head reveal">
+      <h2>项目</h2>
+      <p>每天会用，才会写</p>
+    </div>
+
+    <div class="bento">
+
+      <a class="card c-sessift reveal" style="--i:0" href="https://github.com/kadaliao/sessift" target="_blank" rel="noopener">
+        <div class="card-top">
+          <h3>sessift</h3>
+          <span class="card-badges"><span class="lang" data-lang="rust">Rust</span><span class="stars" data-repo="sessift"></span></span>
+        </div>
+        <p class="card-desc">跨机器搜索、浏览、恢复 AI 编程助手的会话。数据不同步，查询时 SSH 现场查，只把结果传回来。</p>
+        <div class="card-visual v-sessift" aria-hidden="true">
+          <div class="mini-term">
+            <p><span class="p">~</span><span class="prompt">$</span> sessift</p>
+            <p class="dim">本机 + mbp + mm · 只读索引</p>
+            <p><span class="hl">claude 超时重试</span><span class="dim"> · mbp</span></p>
+            <p><span class="hl">codex 重构提议</span><span class="dim"> · mm</span></p>
+          </div>
+          <ul class="stat-row">
+            <li><b>~30ms</b><span>从敲下到出结果</span></li>
+            <li><b>现场查</b><span>数据不用同步</span></li>
+            <li><b>只读</b><span>不动任何会话文件</span></li>
+          </ul>
+          <div class="peers">
+            <span class="peer">本机</span>
+            <span class="link">ssh</span>
+            <span class="peer">mbp</span>
+            <span class="link">ssh</span>
+            <span class="peer">mm</span>
+            <span class="peers-note">会话留在各自的机器上，只把结果传回来</span>
+          </div>
+        </div>
+        <ul class="chips">
+          <li>Claude Code</li><li>Codex</li><li>Pi</li><li>OpenCode</li><li>交互式 TUI</li>
+        </ul>
+        <p class="card-note">Alt-M 唤出 · brew 装 · 索引在 ~/.sessift</p>
+        <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg></span>
+      </a>
+
+      <a class="card c-claude reveal" style="--i:1" href="https://github.com/kadaliao/claude-mods" target="_blank" rel="noopener">
+        <div class="card-top">
+          <h3>claude-mods</h3>
+          <span class="card-badges"><span class="lang" data-lang="typescript">TypeScript</span><span class="stars" data-repo="claude-mods"></span></span>
+        </div>
+        <p class="card-desc">用 function hook 改掉 Claude Code 自己的界面和行为，每个 mod 单独安装。</p>
+        <div class="card-visual v-statusline" aria-hidden="true">
+          <p class="sl-row"><span>opus-4.6</span><span>~/work</span><span>main</span><span class="ok">ctx 41%</span></p>
+          <p class="sl-row dim"><span>in 12.4k</span><span>out 3.1k</span><span>cache 87%</span><span class="ok">42 tok/s</span><span>TTFT 0.6s</span></p>
+        </div>
+        <ul class="chips">
+          <li>statusline</li><li>prompt-en</li><li>danmaku</li><li>ambience</li>
+        </ul>
+        <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg></span>
+      </a>
+
+      <a class="card c-ccenv reveal" style="--i:2" href="https://github.com/kadaliao/ccenv" target="_blank" rel="noopener">
+        <div class="card-top">
+          <h3>ccenv</h3>
+          <span class="card-badges"><span class="lang" data-lang="swift">Swift</span><span class="stars" data-repo="ccenv"></span></span>
+        </div>
+        <p class="card-desc">把一台 Mac 的各层环境画像摆在一起比对：出口 IP、时区、语言、DNS、架构，输出带证据的冲突清单。</p>
+        <div class="card-visual v-rules" aria-hidden="true">
+          <p class="rule hi"><span class="lv">high</span>出口时区 vs 系统时区<span class="rt">−8h</span></p>
+          <p class="rule md"><span class="lv">med</span>出口国家 vs 系统区域<span class="rt">对不上</span></p>
+          <p class="rule ok"><span class="lv">ok</span>时钟 · 架构 · DNS<span class="rt">一致</span></p>
+        </div>
+        <ul class="chips">
+          <li>12 条规则</li><li>Claude 指纹</li><li>零依赖 CLI</li>
+        </ul>
+        <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg></span>
+      </a>
+
+      <a class="card c-esp32 reveal" style="--i:3" href="https://github.com/kadaliao/esp32-26" target="_blank" rel="noopener">
+        <div class="card-top">
+          <h3>esp32-26</h3>
+          <span class="card-badges"><span class="lang" data-lang="c">C</span><span class="stars" data-repo="esp32-26"></span></span>
+        </div>
+        <p class="card-desc">ESP32-S3 桌面小面板：AI 用量、agent 夜池、网关实时请求，都画到 2 英寸屏上。</p>
+        <div class="card-visual v-screen" aria-hidden="true">
+          <div class="screen">
+            <span class="tile t1">CLAUDE<br><b>62%</b></span>
+            <span class="tile t2">CODEX<br><b>18%</b></span>
+            <span class="tile t3">● agent 4</span>
+          </div>
+        </div>
+        <ul class="chips">
+          <li>ESP-IDF</li><li>LVGL</li><li>320×240</li>
+        </ul>
+        <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg></span>
+      </a>
+
+      <a class="card c-mytizi reveal" style="--i:4" href="https://github.com/kadaliao/mytizi" target="_blank" rel="noopener">
+        <div class="card-top">
+          <h3>mytizi</h3>
+          <span class="card-badges"><span class="lang" data-lang="swift">Swift</span><span class="stars" data-repo="mytizi"></span></span>
+        </div>
+        <p class="card-desc">极简 macOS TUN 代理客户端。粘贴订阅链接就能连，DNS、IPv6、国内 CDN 自己处理。</p>
+        <div class="card-visual v-pill" aria-hidden="true">
+          <span class="pill"><span class="led"></span>已连接 · 12.4 MB/s</span>
+          <span class="pill-note">诊断信息 · 已脱敏 · 可一键复制</span>
+        </div>
+        <ul class="chips">
+          <li>内置 mihomo</li><li>一键诊断</li>
+        </ul>
+        <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg></span>
+      </a>
+
+      <a class="card c-herdr reveal" style="--i:5" href="https://github.com/kadaliao/herdr-plugins" target="_blank" rel="noopener">
+        <div class="card-top">
+          <h3>herdr-plugins</h3>
+          <span class="card-badges"><span class="lang" data-lang="python">Python</span><span class="stars" data-repo="herdr-plugins"></span></span>
+        </div>
+        <p class="card-desc">Herdr 的侧边栏与状态栏插件，把工作区和 agent 编号，快捷键终于有看得见的目标。</p>
+        <div class="card-visual v-side" aria-hidden="true">
+          <p><b>1</b> workspace <span class="dim">api</span></p>
+          <p><b>2</b> workspace <span class="dim">site</span></p>
+          <p><b>1</b> agent <span class="dim">claude</span></p>
+        </div>
+        <ul class="chips">
+          <li>space-index</li><li>agent-index</li><li>status-bar</li>
+        </ul>
+        <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg></span>
+      </a>
+
+      <a class="card c-dsh reveal" style="--i:6" href="https://github.com/kadaliao/dsh-plugins" target="_blank" rel="noopener">
+        <div class="card-top">
+          <h3>dsh-plugins</h3>
+          <span class="card-badges"><span class="lang" data-lang="javascript">JavaScript</span><span class="stars" data-repo="dsh-plugins"></span></span>
+        </div>
+        <p class="card-desc">DeepSeek Harness 的插件集：每句 prompt 下面垫一行英文，教过的东西进生词本。</p>
+        <div class="card-visual v-prompt" aria-hidden="true">
+          <p>帮我把这个函数改成惰性求值</p>
+          <p class="dim">Make this function lazily evaluated, or: defer until first use</p>
+        </div>
+        <ul class="chips">
+          <li>prompt-en</li><li>/vocab</li><li>市场安装</li>
+        </ul>
+        <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg></span>
+      </a>
+
+
+    </div>
+
+    <p class="more reveal">还有 70 多个仓库（agent 工具、macOS 小应用、教程工程、浏览器小游戏）<a href="https://github.com/kadaliao?tab=repositories" target="_blank" rel="noopener">在 GitHub 上看全部<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg></a></p>
+  </section>
+
+  <!-- ───────────────────────── now ───────────────────────── -->
+  <section id="now" class="section">
+    <div class="section-head reveal">
+      <h2>现在</h2>
+      <p>2026 年 11 月</p>
+    </div>
+    <ol class="now-list">
+      <li class="reveal" style="--i:0">
+        <span class="now-tag">sessift</span>
+        <p>三台机器的 Claude 会话，30 毫秒搜到，Enter 直接恢复；远端的自动 <code>ssh -t</code> 过去接手。</p>
+      </li>
+      <li class="reveal" style="--i:1">
+        <span class="now-tag">claude-mods</span>
+        <p>在调 danmaku 的手感：<code>rm -rf</code> 和测试失败的反应要够快，不然就不像在吐槽了。</p>
+      </li>
+      <li class="reveal" style="--i:2">
+        <span class="now-tag">ccenv</span>
+        <p>第 12 条规则在调：公司内网下发的 split DNS 和系统自带的 utun，不该算泄漏。</p>
+      </li>
+      <li class="reveal" style="--i:3">
+        <span class="now-tag">esp32-26</span>
+        <p>改 agent-pond 里萤火虫的游动速度。桌面上那块 2 寸屏，现在看的是这个。</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ───────────────────────── about ───────────────────────── -->
+  <section id="about" class="section">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2>关于</h2>
+        <p>我是 Python 工程师，在北京。项目基本都从一个小不方便开始：会话散在三台机器上翻不到，就写 sessift；想知道模型每秒吐多少 token，就改 Claude Code 的 statusline。</p>
+        <p>不太做 demo，做出来自己不用，就放下了。只在自己会碰到的地方抠细节：sessift 只读不写，索引放 <code>~/.sessift</code>，因为它不该碰别人的数据；ccenv 只给离散等级、不打综合分，因为一个分数会让人以为问题解决了。</p>
+        <p>更新不快，经常一个项目放几周再捡起来。GitHub 上有句 Better late than never，算是给自己的。</p>
+      </div>
+      <div class="about-skills reveal" style="--i:1">
+        <h3>手艺</h3>
+        <ul class="chips chips-lg">
+          <li>Rust</li><li>TypeScript</li><li>Python</li><li>Swift</li><li>C / ESP-IDF</li>
+          <li>LLM 应用工程</li><li>Agent 工具链</li><li>TUI</li><li>macOS 原生</li><li>Three.js</li>
+        </ul>
+        <h3>在这些地方</h3>
+        <ul class="links">
+          <li><a href="https://github.com/kadaliao" target="_blank" rel="noopener">GitHub <span class="dim">@kadaliao</span></a></li>
+          <li><a href="https://github.com/kadaliao/homebrew-tap" target="_blank" rel="noopener">Homebrew tap <span class="dim">kadaliao/tap</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <p class="foot-name">Kada Liao <span class="dim">· 给 AI 编程助手做工具</span></p>
+    <p class="dim foot-meta">手写 HTML / CSS / JS，没有框架，没有构建步骤。</p>
+    <div class="foot-links">
+      <button class="link-btn" id="palette-open-2">⌘K 搜索</button>
+      <a href="https://github.com/kadaliao" target="_blank" rel="noopener">GitHub</a>
+      <a href="#top">回到顶部 ↑</a>
+    </div>
+  </div>
+</footer>
+
+<div class="palette" id="palette" hidden>
+  <div class="palette-backdrop" data-close></div>
+  <div class="palette-box" role="dialog" aria-modal="true" aria-label="命令面板">
+    <input id="palette-input" type="text" placeholder="搜索项目、跳转…" autocomplete="off" spellcheck="false" aria-controls="palette-list">
+    <ul id="palette-list" role="listbox"></ul>
+    <p class="palette-foot"><kbd>↑</kbd><kbd>↓</kbd> 选择 <kbd>↵</kbd> 打开 <kbd>esc</kbd> 关闭</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
