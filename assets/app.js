@@ -83,19 +83,30 @@
 
   const paintRepos = (map) => {
     if (!map) return;
-    $$('[data-repo]').forEach((node) => {
-      const repo = map[node.dataset.repo];
-      if (!repo) return;
-      if (node.classList.contains('stars')) {
-        if (repo.stargazers_count > 0) {
-          node.textContent = repo.stargazers_count;
-          node.title = `${repo.stargazers_count} 个星标`;
-        }
-      } else if (node.id === 'last-push') {
-        const ago = relative(repo.pushed_at);
-        if (ago) node.textContent = `${node.dataset.repo} · ${ago}`;
+
+    // 星标：data-repo 可以写多个仓库（开心果三个平台），加起来
+    $$('.stars[data-repo]').forEach((node) => {
+      const total = node.dataset.repo.split(/\s+/)
+        .reduce((sum, name) => sum + (map[name]?.stargazers_count || 0), 0);
+      if (total > 0) {
+        node.textContent = total;
+        node.title = `${total} 个星标`;
       }
     });
+
+    // 最近更新：在列出的仓库里挑最近 push 的那个，名字用卡片标题
+    const last = $('#last-push');
+    if (last?.dataset.repos) {
+      const newest = last.dataset.repos.split(/\s+/)
+        .filter((name) => map[name]?.pushed_at)
+        .sort((a, b) => new Date(map[b].pushed_at) - new Date(map[a].pushed_at))[0];
+      if (newest) {
+        const card = $(`.stars[data-repo~="${newest}"]`)?.closest('.card');
+        const label = card ? $('h3', card).textContent.trim() : newest;
+        const ago = relative(map[newest].pushed_at);
+        if (ago) last.textContent = `${label} · ${ago}`;
+      }
+    }
   };
 
   const loadRepos = async () => {
@@ -176,16 +187,24 @@
   const listEl = $('#palette-list');
 
   const buildItems = () => {
-    const items = $$('.card').map((card) => ({
-      label: $('h3', card).textContent.trim(),
-      meta: [$('.lang', card)?.textContent.trim(), $('.stars', card)?.textContent.trim() && `${$('.stars', card).textContent.trim()} ★`, 'GitHub']
-        .filter(Boolean).join(' · '),
-      href: card.getAttribute('href'),
-      external: true,
-      desc: $('.card-desc', card)?.textContent.trim() || '',
-    }));
+    const items = $$('.card').map((card) => {
+      const stars = $('.stars', card)?.textContent.trim();
+      return {
+        label: $('h3', card).textContent.trim(),
+        meta: [$$('.lang', card).map((n) => n.textContent.trim()).join(' / '), stars && `${stars} ★`, 'GitHub']
+          .filter(Boolean).join(' · '),
+        href: card.getAttribute('href') || $('.card-link', card)?.getAttribute('href'),
+        external: true,
+        desc: $('.card-desc', card)?.textContent.trim() || '',
+      };
+    });
 
-    [['项目', '#work'], ['现在', '#now'], ['关于', '#about']].forEach(([label, href]) => {
+    // 开心果的各平台仓库
+    $$('.plats a').forEach((link) => {
+      items.push({ label: link.dataset.label || link.textContent.trim(), meta: 'GitHub', href: link.getAttribute('href'), external: true });
+    });
+
+    [['应用', '#apps'], ['插件', '#plugins'], ['最近发布', '#recent'], ['关于', '#about']].forEach(([label, href]) => {
       items.push({ label, meta: '页面内', href, external: false });
     });
 
