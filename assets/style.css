@@ -523,6 +523,8 @@ h1 {
 .c-smd     { grid-column: span 7; }
 .c-tizi    { grid-column: span 6; }
 .c-chez    { grid-column: span 6; }
+.c-qe      { grid-column: span 5; }
+.c-lg      { grid-column: span 7; }
 .c-plugin  { grid-column: span 4; }
 
 .card {
@@ -710,6 +712,8 @@ h1 {
 .c-smd .shot     { --tint: rgba(70, 150, 255, .30); }
 .c-tizi .shot    { --tint: rgba(60, 200, 130, .24); }
 .c-chez .shot    { --tint: rgba(46, 230, 214, .22); }
+.c-qe .shot      { --tint: rgba(255, 190, 70, .24); }
+.c-lg .shot      { --tint: rgba(232, 84, 84, .26); }
 
 /* osa 截图自带窗口阴影和透明边 */
 .c-osa .shot .main { top: 8px; left: 2%; width: 96%; filter: none; }
@@ -825,6 +829,10 @@ h1 {
 }
 .plats a::after { content: "↗"; font-size: 10px; color: var(--ink-4); }
 .plats a:hover { border-color: rgba(150, 210, 100, .7); background: rgba(150, 210, 100, .16); color: #fff; }
+
+/* 人生游戏：在线版的链接用它界面里的朱红 */
+.c-lg .plats a { border-color: rgba(232, 84, 84, .34); color: #ffd3cc; background: rgba(232, 84, 84, .09); }
+.c-lg .plats a:hover { border-color: rgba(232, 84, 84, .75); background: rgba(232, 84, 84, .18); color: #fff; }
 
 /* ── 插件卡片里的小视觉 ─────────────────────────────────────── */
 .card-visual {
@@ -1151,7 +1159,7 @@ h1 {
   .hero { grid-template-columns: 1fr; gap: 40px; padding-block: 40px 64px; }
   .term { transform: none; }
   .bento { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .c-osa, .c-kxg, .c-sessift, .c-smd, .c-tizi, .c-chez { grid-column: span 3; }
+  .c-osa, .c-kxg, .c-sessift, .c-smd, .c-tizi, .c-chez, .c-qe, .c-lg { grid-column: span 3; }
   .c-plugin { grid-column: span 2; }
   .card.app { --shot-h: 220px; }
   .now-list { grid-template-columns: 1fr; }
@@ -1164,7 +1172,7 @@ h1 {
   .nav-links { display: none; }
   .nav-gh span { display: none; }
   .bento { grid-template-columns: 1fr; }
-  .c-osa, .c-kxg, .c-sessift, .c-smd, .c-tizi, .c-chez, .c-plugin { grid-column: span 1; }
+  .c-osa, .c-kxg, .c-sessift, .c-smd, .c-tizi, .c-chez, .c-qe, .c-lg, .c-plugin { grid-column: span 1; }
   .card.app { --shot-h: 210px; }
   .now-list a { flex-direction: column; gap: 9px; }
   .hero-facts { grid-template-columns: 1fr 1fr; }

@@ -199,9 +199,15 @@
       };
     });
 
-    // 开心果的各平台仓库
+    // 卡片里的其他链接：开心果的各平台仓库、人生游戏的在线版
     $$('.plats a').forEach((link) => {
-      items.push({ label: link.dataset.label || link.textContent.trim(), meta: 'GitHub', href: link.getAttribute('href'), external: true });
+      const host = link.hostname.replace(/^www\./, '');
+      items.push({
+        label: link.dataset.label || link.textContent.trim(),
+        meta: host === 'github.com' ? 'GitHub' : host,
+        href: link.getAttribute('href'),
+        external: true,
+      });
     });
 
     [['应用', '#apps'], ['插件', '#plugins'], ['最近发布', '#recent'], ['关于', '#about']].forEach(([label, href]) => {

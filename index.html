@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kada Liao — Better late than never.</title>
-<meta name="description" content="Kada Liao，开发者，在北京，喜欢做让生活更轻松的工具：Open Super Agent、sessift、开心果（macOS / iOS / Android）、Tizi、SuckMyDisk、Chezmate，以及 Claude Code、Herdr、DeepSeek Harness 的插件。">
+<meta name="description" content="Kada Liao，开发者，在北京，喜欢做让生活更轻松的工具：Open Super Agent、sessift、开心果（macOS / iOS / Android）、Tizi、SuckMyDisk、Chezmate、QuickEdit、人生游戏，以及 Claude Code、Herdr、DeepSeek Harness 的插件。">
 <meta name="author" content="Kada Liao">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#06070b">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Kada Liao">
 <meta property="og:title" content="Kada Liao — Better late than never.">
-<meta property="og:description" content="喜欢做让生活更轻松的工具：Open Super Agent、sessift、开心果、Tizi、SuckMyDisk、Chezmate。">
+<meta property="og:description" content="喜欢做让生活更轻松的工具：Open Super Agent、sessift、开心果、Tizi、SuckMyDisk、Chezmate、QuickEdit、人生游戏。">
 <meta property="og:url" content="https://kadaliao.github.io/">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
@@ -78,7 +78,7 @@
       <dl class="hero-facts">
         <div>
           <dt>应用</dt>
-          <dd>6 个 · macOS / iOS / Android / Linux</dd>
+          <dd>8 个 · macOS / iOS / Android / Linux / 网页</dd>
         </div>
         <div>
           <dt>插件</dt>
@@ -86,7 +86,7 @@
         </div>
         <div>
           <dt>最近更新</dt>
-          <dd id="last-push" data-repos="open-super-agent sessift kaixinguo kaixinguo-ios kaixinguo-android Tizi suck-my-disk chezmate">Tizi</dd>
+          <dd id="last-push" data-repos="open-super-agent sessift kaixinguo kaixinguo-ios kaixinguo-android Tizi suck-my-disk chezmate quickedit lifegame">Open Super Agent</dd>
         </div>
       </dl>
     </div>
@@ -105,6 +105,12 @@
             <span class="copy-state" data-idle="复制" data-done="已复制 ✓">复制</span>
           </button>
           <p class="term-out">常驻 AI 队友 · macOS 桌面 App</p>
+
+          <button class="term-cmd copy-btn" data-copy="brew install --cask kadaliao/tap/quickedit">
+            <span class="prompt">$</span><span class="cmd">brew install --cask kadaliao/tap/quickedit</span>
+            <span class="copy-state" data-idle="复制" data-done="已复制 ✓">复制</span>
+          </button>
+          <p class="term-out">极快的轻量编辑器 · 顺带装好 qe 命令</p>
 
           <button class="term-cmd copy-btn" data-copy="brew install --cask kadaliao/tap/tizi-desktop">
             <span class="prompt">$</span><span class="cmd">brew install --cask kadaliao/tap/tizi-desktop</span>
@@ -133,7 +139,7 @@
   <section id="apps" class="section">
     <div class="section-head reveal">
       <h2>应用</h2>
-      <p>macOS、iOS、Android 和 Linux 上的独立应用</p>
+      <p>macOS、iOS、Android、Linux 和浏览器里的独立应用</p>
     </div>
 
     <div class="bento">
@@ -266,6 +272,42 @@
         </div>
       </a>
 
+      <a class="card app c-qe reveal" style="--i:6" href="https://github.com/kadaliao/quickedit" target="_blank" rel="noopener">
+        <div class="shot" aria-hidden="true">
+          <img class="main" src="assets/img/qe-markdown.webp" width="1200" height="875" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="app-body">
+          <div class="card-top">
+            <h3>QuickEdit</h3>
+            <span class="card-badges"><span class="lang" data-lang="go">Go</span><span class="stars" data-repo="quickedit"></span></span>
+          </div>
+          <p class="card-desc">极致快速的轻量编辑器：看代码、改配置、读 Markdown、翻日志，打开就用，用完就走。原生 GPU 绘制，应用 12&nbsp;MB；打开 10.8 万行的 Go 文件，冷启动 0.5 秒，开着窗口时 68 毫秒。</p>
+          <ul class="chips">
+            <li>Markdown 并排预览</li><li>30 多种语言高亮</li><li>标签页</li><li>qe 命令行</li>
+          </ul>
+          <p class="card-note">brew install --cask kadaliao/tap/quickedit</p>
+          <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg></span>
+        </div>
+      </a>
+
+      <div class="card app c-lg reveal" style="--i:7">
+        <div class="shot" aria-hidden="true">
+          <img class="main" src="assets/img/lifegame-river.webp" width="1200" height="685" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="app-body">
+          <div class="card-top">
+            <h3><a class="card-link" href="https://github.com/kadaliao/lifegame" target="_blank" rel="noopener">人生游戏</a></h3>
+            <span class="card-badges"><span class="lang" data-lang="typescript">TypeScript</span><span class="stars" data-repo="lifegame"></span></span>
+          </div>
+          <p class="card-desc">每个人都有真正智能的人生模拟：几百个 bot 生活在映射真实历史的当代中国（1980–2060），读书、高考、择业、婚育、下岗、老去。规则引擎跑日常，大模型只在人生节点按各人的性格和处境做抉择，并留下一句内心独白。</p>
+          <ul class="plats">
+            <li><a href="https://lifegame-roan.vercel.app/" target="_blank" rel="noopener" data-label="人生游戏 在线玩">在浏览器里玩</a></li>
+          </ul>
+          <p class="card-note">可以接管任何一个人，或在任何一次抉择上分叉出平行人生 · 不填密钥也能玩</p>
+          <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg></span>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -289,7 +331,7 @@
           <p class="sl-row dim"><span>in 12.4k</span><span>out 3.1k</span><span>cache 87%</span><span class="ok">42 tok/s</span><span>TTFT 0.6s</span></p>
         </div>
         <ul class="chips">
-          <li>statusline</li><li>prompt-en</li><li>danmaku</li><li>ambience</li>
+          <li>statusline</li><li>peek</li><li>prompt-en</li><li>danmaku</li><li>ambience</li>
         </ul>
         <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M17 7H9m8 0v8"/></svg></span>
       </a>
@@ -340,39 +382,39 @@
     </div>
     <ol class="now-list">
       <li class="reveal" style="--i:0">
-        <a href="https://github.com/kadaliao/Tizi/releases/tag/v1.2.0" target="_blank" rel="noopener">
-          <span class="now-tag">Tizi</span>
-          <span class="now-text"><span>节点可以测速了；「自动选择」不再卡在坏节点上，诊断也能看出网页打不开。</span><span class="now-meta">v1.2.0 · 11 月 8 日</span></span>
+        <a href="https://github.com/kadaliao/open-super-agent/releases" target="_blank" rel="noopener">
+          <span class="now-tag">Open Super Agent</span>
+          <span class="now-text"><span>Bot 能直接操作你的 Mac；新增「事件」，网页变了、来了邮件、价格到线时自动处理一次；还能在沙箱里跑代码。</span><span class="now-meta">v0.8.0 → v0.17.0 · 11 月 8–9 日</span></span>
         </a>
       </li>
       <li class="reveal" style="--i:1">
-        <a href="https://github.com/kadaliao/open-super-agent/releases/tag/v0.7.0" target="_blank" rel="noopener">
-          <span class="now-tag">Open Super Agent</span>
-          <span class="now-text"><span>macOS 桌面 App 正式版：下载 dmg 打开就能用，不用装 Docker 和 Python；iPhone App 开始 TestFlight 内测。</span><span class="now-meta">v0.7.0 · 11 月 7 日</span></span>
+        <a href="https://github.com/kadaliao/quickedit/releases/tag/v0.2.1" target="_blank" rel="noopener">
+          <span class="now-tag">QuickEdit</span>
+          <span class="now-text"><span>第一个版本：打开 10.8 万行的 Go 文件，冷启动 0.5 秒；0.2 加了标签页，大文件多核并行读入。</span><span class="now-meta">0.1.0 → 0.2.1 · 11 月 8–9 日</span></span>
         </a>
       </li>
       <li class="reveal" style="--i:2">
-        <a href="https://github.com/kadaliao/kaixinguo-android/releases/tag/v0.2.0" target="_blank" rel="noopener">
-          <span class="now-tag">开心果</span>
-          <span class="now-text"><span>iOS 和 Android 版退出再打开，回到离开时的页面，正在看的剧从原处接着放；Mac 版能自己更新了。</span><span class="now-meta">iOS 0.4.0 · Android 0.2.0 · Mac 0.4.0 · 11 月 6–7 日</span></span>
+        <a href="https://github.com/kadaliao/suck-my-disk/releases/tag/v0.5.4" target="_blank" rel="noopener">
+          <span class="now-tag">SuckMyDisk</span>
+          <span class="now-text"><span>新增「应用」：连同 Library 里的数据一起卸载，或只清缓存；App 能自己更新，也能用 Homebrew 装了。</span><span class="now-meta">0.5.0 → 0.5.4 · 11 月 8–9 日</span></span>
         </a>
       </li>
       <li class="reveal" style="--i:3">
-        <a href="https://github.com/kadaliao/suck-my-disk/releases/tag/v0.4.1" target="_blank" rel="noopener">
-          <span class="now-tag">SuckMyDisk</span>
-          <span class="now-text"><span>认出 npx 缓存；清理前查一遍正在运行的程序，被用到的东西一律跳过。</span><span class="now-meta">0.4.1 · 11 月 7 日</span></span>
+        <a href="https://github.com/kadaliao/claude-mods/releases/tag/peek-v0.2.1" target="_blank" rel="noopener">
+          <span class="now-tag">claude-mods</span>
+          <span class="now-text"><span>新 mod peek：Claude 看过的图片直接画在对话里，ctrl+o 看大图，不调用模型。</span><span class="now-meta">peek 0.2.1 · 11 月 8 日</span></span>
         </a>
       </li>
       <li class="reveal" style="--i:4">
-        <a href="https://github.com/kadaliao/chezmate/releases/tag/v0.1.4" target="_blank" rel="noopener">
-          <span class="now-tag">Chezmate</span>
-          <span class="now-text"><span>新手引导：第一台电脑建立共享版本，一键上传到 GitHub；应用自带 chezmoi，没装也能用。</span><span class="now-meta">0.1.4 · 11 月 7 日</span></span>
+        <a href="https://github.com/kadaliao/sessift/releases/tag/v0.3.3" target="_blank" rel="noopener">
+          <span class="now-tag">sessift</span>
+          <span class="now-text"><span>恢复远端 Mac 上的 Claude 会话不再要求 /login：钥匙串锁着时说明原因，输一次密码解锁。</span><span class="now-meta">v0.3.3 · 11 月 8 日</span></span>
         </a>
       </li>
       <li class="reveal" style="--i:5">
-        <a href="https://github.com/kadaliao/sessift/releases/tag/v0.3.2" target="_blank" rel="noopener">
-          <span class="now-tag">sessift</span>
-          <span class="now-text"><span>浮层左边框不再被中文压掉；herdr 里新开 tab 恢复会话，命令不再显示两遍。</span><span class="now-meta">v0.3.2 · 10 月 31 日</span></span>
+        <a href="https://github.com/kadaliao/Tizi/releases/tag/v1.2.0" target="_blank" rel="noopener">
+          <span class="now-tag">Tizi</span>
+          <span class="now-text"><span>节点可以测速了；「自动选择」不再卡在坏节点上，诊断也能看出网页打不开。</span><span class="now-meta">v1.2.0 · 11 月 8 日</span></span>
         </a>
       </li>
     </ol>
